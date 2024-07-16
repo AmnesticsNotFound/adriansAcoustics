@@ -1,0 +1,80 @@
+/*
+body {
+    padding:0px;
+    margin:0px;
+    border-style: solid;
+    
+    
+}
+:root {
+    border-style:solid;
+    
+    
+    margin:0px;
+}*/
+
+#page {/* for entry*/
+   
+    height:100vh;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:99.5vw;
+    padding:0px;
+    margin:0px;
+
+    
+    
+}
+
+#main {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    width:86vw;
+    padding-bottom:5vh;
+    background-color: rgb(231, 244, 255);
+    align-items: center;
+    line-height:2.5vh;
+}
+
+#footer {
+    
+    width:fit-content;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 2vh;
+}
+
+#right {
+    width:18vh;
+    height:104.5vh;
+    background-color:rgba(245, 245, 245, 0.816);
+    border-left-style:groove;
+    border-color:rgba(255, 200, 0, 0.218);
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    margin:0px;
+    padding:0px;
+}
+
+#rightContainer {
+    display:flex;
+    justify-content: flex-end;
+    margin:0px;
+    padding:0px;
+}
+
+#intro {
+    display:flex;
+    width:40vw;
+    max-width:1000px;
+}
+
+#fakeBird {
+    width:25vw;
+    height:25vw;
+    max-width:600px;
+    max-height:600px;
+}
+

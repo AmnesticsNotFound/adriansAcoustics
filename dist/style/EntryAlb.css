@@ -1,0 +1,59 @@
+#infoImgTrack {
+    display:flex;
+    margin-bottom:10vh;
+    width:70vw;
+    max-width:1900px;
+    justify-content:space-evenly;
+}
+#tracks {
+    font-style:italic;
+    border-style:solid;
+    border-color:rgb(137, 255, 222);
+    background-color:rgb(244, 255, 241);
+    padding:1vh;
+    
+}
+#infoAlbum {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    
+    
+    
+    
+    
+}
+#albumCover {
+    width:20vw;
+    height:20vw;
+    min-height:330px;
+    min-width:330px;
+    max-height:500px;
+    max-width:500px;
+    border-style: solid;
+    border-color:rgb(137, 255, 222)
+}
+
+
+#descAlbum{
+    font-size:large;
+    width:25vw;
+    line-height: 2.5vh;
+    border-style: solid;
+    border-color:rgb(137, 255, 222);
+    background-color:rgb(244, 255, 241);
+    border-radius:10px;
+    padding:10px;
+    
+}
+
+.video-responsive iframe{
+    border-style: solid;
+    border-color:rgb(137, 255, 222);
+}
+
+.albumLine {
+    border-color:rgba(242, 255, 238, 0.816);
+    border-width:10px;
+    border-style:double;
+}
