@@ -1,17 +1,10 @@
-/*
-body {
-    padding:0px;
-    margin:0px;
-    border-style: solid;
-    
-    
+
+#sidePage {
+    display:flex;
+    overflow: visible;
+    height:100vh;
 }
-:root {
-    border-style:solid;
-    
-    
-    margin:0px;
-}*/
+
 
 #page {/* for entry*/
    
@@ -22,7 +15,7 @@ body {
     width:99.5vw;
     padding:0px;
     margin:0px;
-
+    
     
     
 }
@@ -36,6 +29,7 @@ body {
     background-color: rgb(231, 244, 255);
     align-items: center;
     line-height:2.5vh;
+    
 }
 
 #footer {
@@ -46,17 +40,7 @@ body {
     font-size: 2vh;
 }
 
-#right {
-    width:18vh;
-    height:104.5vh;
-    background-color:rgba(245, 245, 245, 0.816);
-    border-left-style:groove;
-    border-color:rgba(255, 200, 0, 0.218);
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
-    margin:0px;
-    padding:0px;
-}
+
 
 #rightContainer {
     display:flex;
@@ -72,9 +56,27 @@ body {
 }
 
 #fakeBird {
+    aspect-ratio: 1;
     width:25vw;
-    height:25vw;
     max-width:600px;
     max-height:600px;
+    min-height:150px;
 }
 
+@media only screen and (max-aspect-ratio:1) and (max-width:750px){
+
+   #banner {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+   }
+
+   #bannerImg {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left:10vw;
+   }
+   
+}

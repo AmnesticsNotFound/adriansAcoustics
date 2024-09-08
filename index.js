@@ -10,7 +10,6 @@ const path = require("path");
 const app = express(),
             bodyParser = require("body-parser");
 dotenv.config();
-process.env.TZ;
 const MONGOURL = process.env.MONGO_URL;
 
 const Bird = require("./models/bird");
@@ -20,7 +19,7 @@ const Album = require("./models/album");
 const Comment = require("./models/comment");
 const birdComment = Comment.birdComment;
 const albumComment = Comment.albumComment;
-
+console.log('!!!!! ' + MONGOURL);
 var store = new MongoDBStore({
   uri: MONGOURL,
   collection: 'sessions'

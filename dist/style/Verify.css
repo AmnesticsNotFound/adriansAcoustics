@@ -1,0 +1,14 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    top:20vh;
+    left:40vw;
+    width:20vw;
+   
+}
+body {
+
+}
+

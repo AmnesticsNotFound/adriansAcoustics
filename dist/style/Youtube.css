@@ -14,3 +14,11 @@
     margin-left:3vw;
   }
   
+  @media only screen and (max-aspect-ratio:1) and (max-width:750px){
+    .video-responsive iframe {
+      width:50vw;
+      height:40vw;
+      margin: 0px;
+      min-width:300px;
+    }
+  }
