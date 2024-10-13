@@ -1,3 +1,21 @@
+#banner {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0px;
+    margin-bottom: 10vh;
+}
+
+#banner h1{
+    font-weight:normal;
+    font-style: italic;
+}
+#banner p, h1{
+    margin: 0px;
+}
+
+
+
 #infoImgTrack {
     display:flex;
     margin-bottom:10vh;
@@ -8,11 +26,32 @@
 }
 #tracks {
     font-style:italic;
+   /* 
+    background-color:rgb(244, 255, 241);*/
     border-style:solid;
-    border-color:rgb(137, 255, 222);
-    background-color:rgb(244, 255, 241);
+    border-width:5px;
+    border-color:rgb(0, 0, 0);
+    background-color:rgb(255, 255, 255);
+    color:black;
+    border-radius:10px;
     padding:1vh;
     height:fit-content;
+    
+}
+
+
+#descAlbum{
+    
+    font-size:large;
+    width:25vw;
+    line-height: 2.5vh;
+    border-style:solid;
+    border-width:5px;
+    border-color:rgb(0, 0, 0);
+    background-color:rgb(255, 255, 255);
+    color:black;
+    border-radius:10px;
+    padding:10px;
     
 }
 #infoAlbum {
@@ -21,6 +60,18 @@
     justify-content:center;
   
 }
+
+#info {
+    /*background-color: rgba(245, 245, 245, 0.816);
+    border-style: solid;
+    border-radius:10px;
+    border-color:rgb(255, 253, 199);*/
+    
+    width:fit-content;
+    margin: 0px;
+    
+}
+
 #albumCover {
     width:20vw;
     height:20vw;
@@ -29,40 +80,55 @@
     max-height:500px;
     max-width:500px;
     border-style: solid;
-    border-color:rgb(137, 255, 222)
-}
-
-
-#descAlbum{
-    border-style: solid;
-    font-size:large;
-    width:25vw;
-    line-height: 2.5vh;
-    border-style: solid;
-    border-color:rgb(137, 255, 222);
-    background-color:rgb(244, 255, 241);
-    border-radius:10px;
-    padding:10px;
+    border-width: 10px;
     
-}
-
-.video-responsive iframe{
-    border-style: solid;
-    border-color:rgb(137, 255, 222);
+    border-color:rgb(255, 255, 255);
+    /*border-style: solid;
+    border-color:rgb(137, 255, 222)*/
 }
 
 .albumLine {
-    border-color:rgba(242, 255, 238, 0.816);
+    border-color:rgba(0, 0, 0, 0.816);
     border-width:10px;
     border-style:double;
 }
 
+
+
+.commentContainer {
+    border-bottom-style:double;
+    width:fit-content;
+    display:flex;
+    flex-direction:column;
+    align-items:baseline;
+    margin-bottom:2vh;
+    gap:1vh;
+    
+}
+
+.commentInfo {
+    display:flex;
+    padding:0px;
+    gap:20px;
+}
+
+.comment {
+    display:flex;
+    align-items: center;
+    gap:10px;
+    
+}
+
+.comment img {
+    width:5vh;
+    height:5vh;
+    border-radius:5px;
+    
+}
 @media only screen and (max-aspect-ratio:1) and (max-width:750px){
     #page {
-        justify-content:left;
         
         
-      
     }
     #mainEntry {
         display:flex;
@@ -98,6 +164,7 @@
     #infoImgTrack {
         display:flex;
         flex-direction: column;
+        gap:3vh;
         margin-bottom:10vh;
         width:50vw;
         min-width:200px;
@@ -131,6 +198,7 @@
         display: flex;
         flex-direction: column;
         width:50vw;
+        gap:5vh;
         padding:0px;
     }
     #descAlbum {

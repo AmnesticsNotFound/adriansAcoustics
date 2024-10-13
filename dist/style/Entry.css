@@ -8,14 +8,7 @@
     max-width:1900px;
 }
 
-#info {
-    background-color: rgba(245, 245, 245, 0.816);
-    border-style: solid;
-    border-radius:10px;
-    border-color:rgb(255, 253, 199);
-    padding:10px;
-    
-}
+
 #infoImg {
    
     display:flex;
@@ -80,35 +73,11 @@ form #submitButton {
     height:2.5vh;
 }
 
-.comment {
-    display:flex;
-    align-items: center;
-    
-}
 
-.comment img {
-    width:5vh;
-    height:5vh;
-    border-radius:5px;
-    
-}
-
-.commentContainer {
-    border-bottom-style:double;
-    display:flex;
-    flex-direction:column;
-    align-items:baseline;
-    margin-bottom:1vh;
-    
-}
 h5 {
     margin:0px;
 }
-.commentInfo {
-    display:flex;
-    padding:0px;
-    gap:20px;
-}
+
 
 #seperator {
     margin-top:5vw;

@@ -1,8 +1,4 @@
-.video-responsive {
-    
-    
-    
-  }
+
   
 .video-responsive iframe {
     width:35vw;
@@ -10,7 +6,7 @@
     border-style:solid;
     border-radius: 10px;
     border-width:.5vh;
-    border-color:rgb(255, 253, 199);
+    border-color:rgb(0, 0, 0);
     margin-left:3vw;
   }
   

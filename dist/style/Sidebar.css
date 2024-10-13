@@ -9,13 +9,14 @@ h4 {
 }
 
 #sideBar {
+    color:black;
     margin:0px;
     padding: 5px 0;
     width:20vh;
     height:104.5vh;
     border-right-style:groove;
-    border-color:rgba(255, 200, 0, 0.218);
-    background-color:rgba(245, 245, 245, 0.816);
+    border-color:rgb(0, 0, 0);
+    background-color:rgb(255, 255, 255);
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
     
@@ -59,13 +60,9 @@ h4 {
     align-items: center;
 }
 #right {
-    width:18vh;
+    width:1vh;
     height:104.5vh;
-    background-color:rgba(245, 245, 245, 0.816);
-    border-left-style:groove;
-    border-color:rgba(255, 200, 0, 0.218);
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
+    background-color:rgba(245, 245, 245, 0);
     margin:0px;
     padding:0px;
 }
