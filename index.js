@@ -203,7 +203,7 @@ app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, './dist/index.html'));
   });
 
-  app.get(`/entry/bird/:id`, (req,res) => {
+  app.get(`/entry/headphone/:id`, (req,res) => {
     res.sendFile(path.join(__dirname, './dist/index.html'));
   });
 
