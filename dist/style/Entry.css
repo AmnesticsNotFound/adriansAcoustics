@@ -151,7 +151,7 @@ align-items:center;
 
 .commentContainer {
   border-bottom-style:double;
-  width:fit-content;
+  width:100%;
   display:flex;
   flex-direction:column;
   align-items:baseline;
@@ -193,8 +193,8 @@ align-items:center;
 }
 
 #formIDA #submitButton {
-    height:10%;
-    width:15%;
+    aspect-ratio:16/9;
+    width:20%;
     border-style:none;
     border-radius: 5px;
     margin:0px;

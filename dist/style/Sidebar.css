@@ -68,7 +68,7 @@ h4 {
     border-bottom-left-radius: 20px;
     display:flex;
     align-items: center;
-    height:8vh;
+    height:fit-content;
 }
 #profile img {
     width:7vh;
