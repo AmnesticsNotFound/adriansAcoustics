@@ -1,19 +1,23 @@
 
   
 .video-responsive iframe {
-    width:35vw;
-    height:20vw;
+    width:50vw;
+    height:30vw;
     border-style:solid;
     border-radius: 10px;
     border-width:.5vh;
-    border-color:rgb(0, 0, 0);
-    margin-left:3vw;
+    border-color:rgb(255, 255, 255);
+    
+    max-width:1500px;
+    max-height:900px;
   }
   
-  @media only screen and (max-aspect-ratio:1) and (max-width:750px){
+
+  
+  @media only screen and (max-aspect-ratio:1) and (max-width:1440px){
     .video-responsive iframe {
-      width:50vw;
-      height:40vw;
+      width:97vw;
+      height:70vw;
       margin: 0px;
       min-width:300px;
     }

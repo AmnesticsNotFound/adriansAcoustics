@@ -1,76 +1,208 @@
-#banner {
-    
+#mainEntryH {
+  width:100vw;
+  
 
 }
 
-#mainEntry {
-    width:70vw;
-    max-width:1900px;
-}
-
-
-#infoImg {
-   
-    display:flex;
-    justify-content:space-evenly;
-    align-items: center;
-    margin-bottom:10vh;
-    
-}
-
-#img {
-    width:20vw;
-    height:30vw;
-    max-width:500px;
-    max-height:650px;
-    border-style:solid;
-    border-radius: 10px;
-    border-width:.5vh;
-    border-color:rgb(255, 253, 199);
-    margin-left: 10vw;
-    
-}
-
-
-
-#descVid {
-    
-    padding-top:3vh;
-    display:flex;
-    justify-content:space-evenly;
-    align-items: center;
+#bannerH {
+  display:flex;
+  flex-direction:column;
+  margin-bottom:1vh;
+  padding:0px;
+  text-align: left;
+  margin-left:30px;
+  width:fit-content;
   
 }
 
-#desc{
-    font-size:large;
-    width:25vw;
-    line-height: 2.5vh;
-    border-style: solid;
-    border-radius:10px;
-    border-color:rgb(255, 253, 199);
-    padding:10px;
-    background-color: rgba(245, 245, 245, 0.816);
+#littleBanner {
+  display:flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items:center;
+  margin-left:10vw;
+  gap:3%;
+}
+#bannerH h1{
+  display: inline;
+  line-height: 0.8em;
+  font-size:10vw;
+  margin:0px;
+  padding:0px;
+  padding-bottom:1vh;
 }
 
-#commentsBody hr {
-    width:20vh;
+/*makes headphone name scale with less vw once the screen is 2000px wide*/
+@media only screen and (min-width:2000px){
+  #bannerH h1{
+    font-size:7vw;
+  }
+
+  #infoRow {
+   gap:1vw;
+  }
+}
+
+
+
+
+
+
+#infoRow {
+  display:flex;
+  flex-direction: row;
+  gap:3vw;
+  /*border-style:solid;*/
+  align-items: center;
+  width:100%;
+  max-width:2500px;
+  
+ 
+}
+
+#infoHP {
+ 
+  height:50%;
+  width:50%;
+  max-width: 1226px;
+  font-size: 150%;
+  border-color:black;
+  margin-bottom: 3vh;
+
+}
+#titleImages {
+  display:flex;
+  flex-direction: row;
+  
+  
+}
+
+#mainImg {
+  margin-left:30px;
+    width:30vw;
+    max-width:700px;
+    height:40vw;
+    max-height:850px;
+    border-style:solid;
+    border-radius: 10px;
+    border-width:.5vh;
+    border-color:rgb(255, 255, 255);
+    
     
 }
 
-form #textBox {
-    width:25vh;
-    height:12.5vh;
+#graph {
+  margin-top:5vh;
+  width:100%;
+  height:50%;
+  max-width: 2000px;
+  max-height:1000px;
 }
 
-form {
+#graphDiv {
+  
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:90%;
+  margin-left: 4vw;
+ 
+}
+
+#vidComments {
+    
+    margin-top:10%;
+    margin-right:10%;
+    display:flex;
+    justify-content: center;
+    gap:10%;
+    flex-direction: row;
+   
+    width:100%;
+}
+
+
+#commentsBody {
+  width:25%;
+  max-width:500px;
+}
+#commentsBody h1 {
+  padding: 0px;
+}
+#commentMaker hr {
+    width:95%;
+    
+}
+#commentMaker {
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items:center;
+}
+
+#commentMaker textArea {
+  width:100%;
+  height:90%;
+  border-radius: 10px;
+}
+
+
+
+.commentContainer {
+  border-bottom-style:double;
+  width:fit-content;
+  display:flex;
+  flex-direction:column;
+  align-items:baseline;
+  margin-bottom:2vh;
+  gap:1vh;
+  
+}
+
+.commentInfo {
+  display:flex;
+  padding:0px;
+  gap:20px;
+}
+
+.comment {
+  display:flex;
+  align-items: center;
+  gap:10px;
+  
+}
+
+.comment img {
+  width:5vh;
+  height:5vh;
+  border-radius:5px;
+  
+}
+
+
+
+#formIDA {
     display:flex;
     flex-direction: column;
-    align-items:center;
+    
+   
+    aspect-ratio:16/9;
+    width:100%;
+    max-width:700px;
 }
 
-form #submitButton {
-    height:2.5vh;
+#formIDA #submitButton {
+    height:10%;
+    width:15%;
+    border-style:none;
+    border-radius: 5px;
+    margin:0px;
+    color:white;
+    background-color: rgb(98, 98, 98);
+    
+   
+    
 }
 
 
@@ -90,14 +222,15 @@ hr {
 }
 
 #img-fader {
-    width: 300px;
-    height: 300px;
+    width: fit-content;
+    height: fit-content;
+    
   }
   
   #img-fader img{
     position:absolute;
-    top: 7vh;
-    left: 50vw;
+    top: 250px;
+    left:80px;
     animation-name: imagefade;
     animation-timing-function:ease-in-out;
     animation-iteration-count: infinite;
@@ -136,3 +269,170 @@ hr {
     animation-delay: 10s;
   }
   
+
+
+  @media only screen and (max-aspect-ratio:1) and (max-width:1440px){
+
+    #page {
+      width:98vw;
+    }
+    #mainEntryH {
+      width:98vw;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      margin-left:4vw;
+    
+    }
+
+    #bannerH {
+      display:flex;
+      flex-direction:column;
+      margin-bottom:1vh;
+      padding:0px;
+      text-align: left;
+      width:97vw;
+      
+    }
+    
+    #littleBanner {
+      display:flex;
+      flex-direction: row;
+      justify-content: right;
+      align-items:center;
+      margin-right:6vw;
+      gap:3%;
+      
+    }
+
+    #littleBanner h3{
+      font-size:130%;
+    }
+    #bannerH h1{
+      display: inline;
+      line-height: 0.8em;
+      font-size:13vw;
+      margin:0px;
+      padding:0px;
+      padding-bottom:1vh;
+    }
+
+    #mainImg {
+      width:80vw;
+      max-width:600px;
+      height:80vw;
+      max-height:850px;
+      border-style:solid;
+      border-radius: 10px;
+      border-width:.5vh;
+      border-color:rgb(255, 253, 199);
+      
+      
+  }
+  
+  #infoRow {
+    display:flex;
+    flex-direction: column;
+    
+    align-items: center;
+    /*border-style:solid;*/
+    
+    
+    width:95%;
+    
+    
+   
+  }
+
+  #infoHP {
+   
+    height:50%;
+    width:90%;
+    max-width: 1226px;
+    font-size: 250%;
+    border-color:black;
+    margin-bottom: 3vh;
+  
+  }
+  #graph {
+    margin-top:5vh;
+    width:98%;
+    height:100%;
+    
+  }
+  
+  #graphDiv {
+    
+    display:flex;
+    flex-direction: column;
+   
+    width:97%;
+    margin-left:0px;
+    margin-right:0px
+    
+   
+  }
+
+  #vidComments {
+    
+    margin-top:10%;
+    margin-right:0%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap:11%;
+    width:95%;
+}
+
+#commentMaker {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width:100%;
+  }
+
+  #formIDA {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+   
+   
+    width:95vw;
+   
+}
+
+#formIDA #submitButton {
+    height:5vh;
+    width:20vw;
+    border-style:none;
+    border-radius: 5px;
+    margin:0px;
+    color:white;
+    background-color: rgb(98, 98, 98);
+    font-size:150%;
+  
+}
+  #commentMaker textArea {
+    width:90%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    font-size:200%;
+  }
+  
+  
+  
+  .commentContainer {
+    border-bottom-style:double;
+    width:80vw;
+    display:flex;
+    flex-direction:column;
+    align-items:baseline;
+    margin-bottom:2vh;
+    
+    font-size: 140%;
+    
+  }
+}

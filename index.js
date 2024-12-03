@@ -16,8 +16,9 @@ const Bird = require("./models/bird");
 const User = require("./models/user");
 const Session = require("./models/session");
 const Album = require("./models/album");
+const Headphone = require("./models/headphone");
 const Comment = require("./models/comment");
-const birdComment = Comment.birdComment;
+const headphoneComment = Comment.headphoneComment;
 const albumComment = Comment.albumComment;
 console.log('!!!!! ' + MONGOURL);
 var store = new MongoDBStore({
@@ -48,7 +49,7 @@ app.listen(8080, () => {
 })
 
 
-//console.log(birdComment)
+//console.log(headphoneComment)
 
 mongoose.connect(MONGOURL).then(()=> {
     console.log("DB connected");
@@ -58,7 +59,7 @@ app.post("/submitComment", async(req,res)=> {
     console.log(req.body);
     let newComment;
     if (req.body.album == "false") {
-            newComment = new birdComment({
+            newComment = new headphoneComment({
             name:req.body.user.name,
             email:req.body.user.email,
             text:req.body.comment,
@@ -90,7 +91,7 @@ app.post("/getComments", async(req,res) => {
     let comments;
     console.log(req.body.entryID)
     if (req.body.album == "false") {
-        comments = await birdComment.find({ entryID: req.body.entryID }).exec();
+        comments = await headphoneComment.find({ entryID: req.body.entryID }).exec();
         //console.log("birds")
     }
     else {
@@ -135,16 +136,16 @@ app.post("/validateID", async(req,res) => {
 
 app.post("/pullAllData", async(req,res)=> {
     //console.log(req.body.entryID)
-    const response = await Bird.find().exec();
+    const response = await Headphone.find().exec();
     const response2 = await Album.find().exec();
-    if (response) {
-       //console.log("Data found: " + response + response2);
-        res.json([response, response2])
+    /*if (response) {
+       //console.log("Data found: " + response + response2);*/
+        res.json([response, response2]);
 
-    }
-    else {
-       console.log("Nothing found") 
-    }
+   // }
+    //else {
+       //console.log("Nothing found") 
+    //}
         
     }
 )
@@ -156,7 +157,7 @@ app.post("/pullData", async(req,res)=> {
          response = await Album.findOne({ _id: req.body.entryID }).exec();
     }
     else {
-         response = await Bird.findOne({ _id: req.body.entryID }).exec();
+         response = await Headphone.findOne({ _id: req.body.entryID }).exec();
           
     }
     

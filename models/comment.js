@@ -9,9 +9,9 @@ const CommentSchema = new mongoose.Schema({
     timestamp: { type:Date, required: true, default: Date.now}
 });
 
-const birdComment = mongoose.model("birdComment", CommentSchema);
+const headphoneComment = mongoose.model("headphoneComment", CommentSchema);
 const albumComment = mongoose.model("albumComment", CommentSchema);
 module.exports = {
     
-    birdComment, albumComment
+    headphoneComment, albumComment
 }

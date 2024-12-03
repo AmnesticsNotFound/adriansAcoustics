@@ -6,10 +6,24 @@ h3 {
 
 h4 {
     margin:0px;
+    font-size:1.5vh;
 }
-
+.links {
+    font-size: 1.3vh;
+}
+#sidePull {
+    display:flex;
+    gap:0px;
+    padding: 0px;
+    margin:0px;
+    position: sticky;
+    left:0px;
+    width:1vh;
+    max-width:300px;
+    height:100%;
+}
 #sideBar {
-    color:black;
+   /* color:black;
     margin:0px;
     padding: 5px 0;
     width:20vh;
@@ -19,6 +33,21 @@ h4 {
     background-color:rgb(255, 255, 255);
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
+*/
+        
+        margin:0px;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        cursor: pointer;
+        position:sticky;
+        color:black;
+        border-right-style:groove;
+        border-color:rgb(0, 0, 0);
+        background-color:rgb(255, 255, 255);
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        height:100%;
     
 }
 #logo {
@@ -27,11 +56,12 @@ h4 {
     border-bottom-style:solid;
     border-bottom-left-radius: 20px;
     padding:0px;
-
+    font-size:19px;
+    padding-right:2px;
 }
-#logoImg,h2{
+#logoImg{
   width:10vh;
-  font-size:24px;
+  
 }
 #profile {
     border-bottom-style:solid;
@@ -41,36 +71,71 @@ h4 {
     height:8vh;
 }
 #profile img {
-    width:80px;
-    height:fit-content;
+    width:7vh;
+    aspect-ratio: 1;
     margin:0px;
 }
 #entries {
     padding:0px;
 }
 
-#parrots {
-    display:flex;
-    flex-direction: column;
-}
 
-#albums {
+
+#headphones {
     display:flex;
     flex-direction: column;
     align-items: center;
 }
+#albums {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:.5vh;
+}
 #right {
-    width:1vh;
+    width:0vh;
     height:104.5vh;
     background-color:rgba(245, 245, 245, 0);
     margin:0px;
     padding:0px;
-}
-#pullElem img {
     display:none;
 }
+#pullElem img {
+    display:block;
+        aspect-ratio: 1;
+        width:45px;
+}
 
-@media only screen and (max-aspect-ratio:1) and (max-width:750px){
+#pullElem {
+        
+    display:flex;
+    align-items: center;
+    border-right-style: solid;
+    margin:0px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height:100%;
+    width:30px;
+    background-color: white;
+    position:absolute;
+    float:left;
+    
+    
+}
+
+@media only screen and (max-width:1200px){
+    #logo {
+        align-items: center;
+        justify-content: center;
+    }
+    #logo h2{
+        display:none;
+    }
+    #logoImg {
+        width:12vh;
+    }
+}
+@media only screen and (max-aspect-ratio:1) and (max-width:1000px){
 
     #right {
       display:none;
@@ -87,19 +152,19 @@ h4 {
         margin:0px;
         position: sticky;
         left:0px;
-        
+        max-width:1000px;
         
     }
     #sideBar {
         
-        width:0px;
+        min-width:200px;
         margin:0px;
         transform-origin: left;
         transform: scaleX(0);
         transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
         cursor: pointer;
         position:sticky;
-        border-bottom-right-radius: 0px;
+        border-bottom-right-radius: 0px;    
         border-top-right-radius: 0px;
     }
     #pullElem {
@@ -132,5 +197,8 @@ h4 {
         
         
     }
-
+    #headphones,#albums {
+        font-size:10%;
+    }
+    
 }

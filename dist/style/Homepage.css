@@ -11,7 +11,7 @@
     height:100vh;
     display:flex;
     flex-direction:row;
-    justify-content:space-between;
+    /*justify-content:space-between;*/
     width:99.5vw;
     padding:0px;
     margin:0px;
@@ -23,15 +23,25 @@
 #main {
     display:flex;
     flex-direction: column;
-    justify-content:center;
-    width:86vw;
+    justify-content: center;
+    width:100vw;
     padding-bottom:5vh;
-    background-color: rgb(123, 0, 0);
+    background-color: rgb(54, 54, 54);
     align-items: center;
     line-height:2.5vh;
     
 }
-
+#bannerHome {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    font-size: 2vh;
+   }
+   
+#bannerHome h1{
+    font-size:10vh;
+}
 #footer {
     
     width:fit-content;
@@ -65,7 +75,7 @@
 
 @media only screen and (max-aspect-ratio:1) and (max-width:750px){
 
-   #banner {
+   #bannerHome {
     display:flex;
     flex-direction: column;
     align-items: center;

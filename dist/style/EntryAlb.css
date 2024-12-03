@@ -1,3 +1,13 @@
+#mainEntry {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    min-width:200px;
+    width:98vw;
+    
+}
+
 #banner {
     display:flex;
     flex-direction: column;
@@ -9,6 +19,7 @@
 #banner h1{
     font-weight:normal;
     font-style: italic;
+    font-size:400%
 }
 #banner p, h1{
     margin: 0px;
@@ -18,19 +29,27 @@
 
 #infoImgTrack {
     display:flex;
-    margin-bottom:10vh;
+    margin-bottom: 1vh;
     width:70vw;
     max-width:1900px;
     justify-content:space-evenly;
-    align-items: center;
+    align-items:end;
+}
+#descVid {
+    display:flex;
+    
+    justify-content: center;
+    
+    
 }
 #tracks {
     font-style:italic;
+    font-size:1.3vh;
    /* 
     background-color:rgb(244, 255, 241);*/
-    border-style:solid;
+    border-style: solid;
     border-width:5px;
-    border-color:rgb(0, 0, 0);
+    border-color:rgb(106, 0, 0);
     background-color:rgb(255, 255, 255);
     color:black;
     border-radius:10px;
@@ -42,12 +61,13 @@
 
 #descAlbum{
     
-    font-size:large;
+    font-size:xx-large;
+    
     width:25vw;
     line-height: 2.5vh;
-    border-style:solid;
+    border-style: solid;
     border-width:5px;
-    border-color:rgb(0, 0, 0);
+    border-color:rgb(106, 0, 0);
     background-color:rgb(255, 255, 255);
     color:black;
     border-radius:10px;
@@ -73,12 +93,10 @@
 }
 
 #albumCover {
-    width:20vw;
-    height:20vw;
-    min-height:330px;
+    width:40vw;
+    aspect-ratio:1;
     min-width:330px;
-    max-height:500px;
-    max-width:500px;
+    max-width:1000px;
     border-style: solid;
     border-width: 10px;
     
@@ -91,41 +109,45 @@
     border-color:rgba(0, 0, 0, 0.816);
     border-width:10px;
     border-style:double;
+    width:50%;
 }
 
-
-
-.commentContainer {
-    border-bottom-style:double;
-    width:fit-content;
+#commentsBodyA {
+    
     display:flex;
-    flex-direction:column;
-    align-items:baseline;
-    margin-bottom:2vh;
-    gap:1vh;
+    flex-direction: column;
+    width:50%;
     
 }
-
-.commentInfo {
-    display:flex;
-    padding:0px;
-    gap:20px;
-}
-
-.comment {
-    display:flex;
+#commentMakerA {
+    width:100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap:10px;
+}
+#commentList {
     
 }
-
-.comment img {
-    width:5vh;
-    height:5vh;
-    border-radius:5px;
-    
+#formID {
+    width:100%;
+    height:15vh;
+    max-width:1500px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
-@media only screen and (max-aspect-ratio:1) and (max-width:750px){
+#formID textArea{
+    width:100%;
+    height:75%;
+}
+#submitButton {
+    width:10%;
+    height:15%;
+    border-radius: 7px;
+    background-color:rgb(111, 0, 0);
+    color:white;
+}
+@media only screen and (max-aspect-ratio:1) and (max-width:1440px){
     #page {
         
         
@@ -134,15 +156,20 @@
         display:flex;
         flex-direction: column;
         align-items: center;
-        margin-left:8vw;
+        width:95vw;
         min-width:200px;
-        
-        
+        overflow-x: hidden;
+        margin-left:4vw;
     }
     #banner h1 {
-        width:50vw;
-        font-size: 200%;
+        width:100vw;
+        font-size: 10vw;
         min-width:200px;
+        
+    }
+
+    #banner h4 { 
+        font-size: 5vw;
     }
 
     #info {
@@ -156,10 +183,10 @@
         align-items: center;
     }
     #descAlbum {
-        width:50vw;
-        min-width:200px;
-        min-width:150px;
-        font-size:100%
+        width:90vw;
+        
+        font-size:200%;
+        order: 1;
     }
     #infoImgTrack {
         display:flex;
@@ -175,15 +202,16 @@
     }
 
     #tracks {
-        width:40vw;
+        width:fit-content;
         min-width:200px;
         height:fit-content;
-        font-size:100%;
+        font-size:150%;
+       
         
     }
     #albumCover {
-        width:50vw;
-        height:50vw;
+        width:80vw;
+        aspect-ratio: 1;
         min-height:200px;
         min-width:200px;
         
@@ -197,12 +225,33 @@
         min-width:200px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         width:50vw;
         gap:5vh;
         padding:0px;
-    }
-    #descAlbum {
-        width:fit-content;
+        margin-right:0px;
     }
     
+    #commentsBodyA {
+        width:97vw;
+        
+        
+    }
+    #commentList {
+        width:50vw;
+        margin-left:3vw;
+    }
+    #formID textArea{
+        width:90%;
+        height:75%;
+        font-size:200%;
+    }
+    #submitButton {
+        width:20%;
+        height:25%;
+        min-width: 120px;
+        border-radius: 7px;
+        font-size:200%;
+        color:white;
+    }
   }
