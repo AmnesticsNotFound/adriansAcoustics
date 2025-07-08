@@ -23,23 +23,13 @@ h4 {
     
 }
 #sideBar {
-   /* color:black;
-    margin:0px;
-    padding: 5px 0;
-    width:20vh;
-    height:104.5vh;
-    border-right-style:groove;
-    border-color:rgb(0, 0, 0);
-    background-color:rgb(255, 255, 255);
-    border-bottom-right-radius: 50px;
-    border-top-right-radius: 50px;
-*/
+  
         
         margin:0px;
         transform-origin: left;
         transform: scaleX(0);
         transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-        cursor: pointer;
+        
         position:sticky;
         color:black;
         border-right-style:groove;
@@ -258,7 +248,7 @@ h4 {
         transform-origin: left;
         transform: scaleX(0);
         transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-        cursor: pointer;
+        
         position:sticky;
         border-bottom-right-radius: 0px;    
         border-top-right-radius: 0px;
