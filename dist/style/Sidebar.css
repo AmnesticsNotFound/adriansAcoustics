@@ -273,7 +273,7 @@ h4 {
         border-top-right-radius: 50px;
         border-bottom-right-radius: 50px;
         height:100%;
-        width:10vw;
+        width:15vw;
         max-width: none;
         background-color: white;
         position:absolute;
@@ -287,8 +287,8 @@ h4 {
     #pullElem img{
         display:block;
         aspect-ratio: 1;
-        width:3vw;
-        max-width: 45px;
+        width:50%;
+        
     }
     a {
         
