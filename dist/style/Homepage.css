@@ -8,11 +8,12 @@
 
 #page {/* for entry*/
    
-    height:100vh;
+    height:fit-content;
+    min-height: 100vh;
     display:flex;
     flex-direction:row;
     /*justify-content:space-between;*/
-    width:99.5vw;
+    width:99vw;
     padding:0px;
     margin:0px;
     
@@ -23,12 +24,10 @@
 #main {
     display:flex;
     flex-direction: column;
-    justify-content: center;
     width:100vw;
-    padding-bottom:5vh;
-    background-color: rgb(54, 54, 54);
+    padding-top:min(10vh, 20vw);
     align-items: center;
-    line-height:2.5vh;
+    justify-content:start;
     
 }
 #bannerHome {
@@ -40,7 +39,7 @@
    }
    
 #bannerHome h1{
-    font-size:10vh;
+    font-size:min(4vw,7.5vh);
 }
 #footer {
     
@@ -73,20 +72,37 @@
     min-height:150px;
 }
 
-@media only screen and (max-aspect-ratio:1) and (max-width:750px){
+#bannerImg {
+    width:30vw;
+    max-width:600px;
+    
+    }
 
-   #bannerHome {
+@media only screen and (max-aspect-ratio:1){
+
+    #main {
+        padding-top:min(10vh, 20vw);
+        align-items: center;
+        justify-content:start;
+    }
+   #bannerHome h1{
     display:flex;
     flex-direction: column;
     align-items: center;
+    font-size:10vw;
     
    }
 
    #bannerImg {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left:10vw;
+   width:50vw;
+   margin-bottom:1vh;
+   
    }
+
+   #intro {
+    
+    width:90vw;
+    max-width:none;
+}
    
 }

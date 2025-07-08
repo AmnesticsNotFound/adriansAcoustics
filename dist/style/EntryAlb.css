@@ -2,7 +2,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    
+    height:fit-content;
     min-width:200px;
     width:98vw;
     
@@ -14,13 +14,21 @@
     align-items: center;
     padding:0px;
     margin-bottom: 10vh;
+    width:50vw;
+    
+    font-size:22px;
 }
 
 #banner h1{
     font-weight:normal;
     font-style: italic;
-    font-size:400%
+    font-size:390%
 }
+
+#banner h4 { 
+    font-size: 100%;
+}
+
 #banner p, h1{
     margin: 0px;
 }
@@ -29,16 +37,16 @@
 
 #infoImgTrack {
     display:flex;
-    margin-bottom: 1vh;
+    
     width:70vw;
     max-width:1900px;
-    justify-content:space-evenly;
+    
     align-items:end;
 }
 #descVid {
     display:flex;
     
-    justify-content: center;
+    
     
     
 }
@@ -62,9 +70,9 @@
 #descAlbum{
     
     font-size:xx-large;
-    
+    min-width:420px;
     width:25vw;
-    line-height: 2.5vh;
+    line-height: 120%;
     border-style: solid;
     border-width:5px;
     border-color:rgb(106, 0, 0);
@@ -95,8 +103,8 @@
 #albumCover {
     width:40vw;
     aspect-ratio:1;
-    min-width:330px;
-    max-width:1000px;
+    /*min-width:330px;
+    max-width:1000px;*/
     border-style: solid;
     border-width: 10px;
     
@@ -112,21 +120,34 @@
     width:50%;
 }
 
-#commentsBodyA {
+#commentsBody {
     
     display:flex;
     flex-direction: column;
     width:50%;
+    max-width:1000px;
+    align-items: center;
     
 }
-#commentMakerA {
-    width:100%;
+
+hr {
+    width:25%;
+    border-color:rgba(245, 245, 245, 0.816);
+    border-width:10px;
+    border-style:double;
+  }
+
+#commentMaker {
+    width:60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width:520px;
 }
 #commentList {
-    
+    width:100%;
+    display: flex;
+    flex-direction: column-reverse;
 }
 #formID {
     width:100%;
@@ -141,14 +162,94 @@
     height:75%;
 }
 #submitButton {
-    width:10%;
-    height:15%;
+    width:15%;
+    max-width:120px;
+    aspect-ratio: 21/9;
     border-radius: 7px;
     background-color:rgb(111, 0, 0);
     color:white;
 }
-@media only screen and (max-aspect-ratio:1) and (max-width:1440px){
+
+
+@media (aspect-ratio >= 16/9) and (min-width:3840px){
+
+    #banner {
+        
+        
+        font-size:22px;
+    }
+    
+    #banner h1{
+        
+        font-size:600%;
+    }
+    
+    #banner h4 { 
+        font-size:150%;
+        
+    }
+
+    #descAlbum{
+        height:60%;
+        width: 55%;
+        line-height: normal;
+    
+    }
+    #albumCover {
+        
+        
+        width:45%;
+       
+    }
+
+    #commentsBody {
+        width:50%;
+        max-width: 2000px;
+    }
+
+    #commentMaker {
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width:900px;
+        font-size:1.5vh;
+    }
+
+    #formID textArea {
+        width: 100%;
+        font-size: 1.4vh;
+        max-width:800px;
+    }
+
+    #submitButton {
+        max-width:200px;
+        width:15%;
+        font-size: 100%;
+    }
+
+    .commentContainer {
+        font-size: 1.8vh;
+    }
+
+}
+@media only screen and (max-width:1919px){
+
+    
+
+    
+}
+
+/*for mobile devices and portait mode monitors*/
+@media (max-aspect-ratio:1){
+
+    :root {
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
     #page {
+        /*height:300vh;*/
+        
         
         
     }
@@ -160,22 +261,25 @@
         min-width:200px;
         overflow-x: hidden;
         margin-left:4vw;
+        
     }
     #banner h1 {
-        width:100vw;
-        font-size: 10vw;
-        min-width:200px;
+        width:88vw;
+        font-size: 8vw;
+        min-width:0px;
         
     }
 
     #banner h4 { 
-        font-size: 5vw;
+        
+        font-size: 3vw;
     }
 
     #info {
         width:40vw;
         font-size:100%;
         min-width:200px;
+        margin-top:5vw;
         
     }
     #infoAlbum {
@@ -184,8 +288,8 @@
     }
     #descAlbum {
         width:90vw;
-        
-        font-size:200%;
+        min-width:0px;
+        font-size:5vw;
         order: 1;
     }
     #infoImgTrack {
@@ -193,7 +297,7 @@
         flex-direction: column;
         gap:3vh;
         margin-bottom:10vh;
-        width:50vw;
+        width:98vw;
         min-width:200px;
         max-width:1900px;
         justify-content:space-evenly;
@@ -205,15 +309,16 @@
         width:fit-content;
         min-width:200px;
         height:fit-content;
-        font-size:150%;
+        font-size:400%;
+        display: none;
        
         
     }
     #albumCover {
         width:80vw;
         aspect-ratio: 1;
-        min-height:200px;
-        min-width:200px;
+        /*min-height:200px;
+        min-width:200px;*/
         
     }
 
@@ -232,19 +337,27 @@
         margin-right:0px;
     }
     
-    #commentsBodyA {
+    #commentsBody {
         width:97vw;
         
         
     }
-    #commentList {
-        width:50vw;
-        margin-left:3vw;
+
+    #commentMaker {
+        width:100%;
+        /*height:25vh;*/
+        max-width: none;
+    }
+
+    
+    #formID {
+        height:90%;
     }
     #formID textArea{
-        width:90%;
-        height:75%;
-        font-size:200%;
+        width:94%;
+        height:100%;
+        font-size:min(2vw, 2vh);
+        padding:0;
     }
     #submitButton {
         width:20%;
@@ -253,5 +366,78 @@
         border-radius: 7px;
         font-size:200%;
         color:white;
+        max-width: none;
     }
-  }
+
+    #commentList {
+        width:90vw;
+        
+    }
+
+    .commentContainer {
+        font-size: 3vw;
+    }
+    .comment {
+        font-size: 100%;
+    }
+
+    .comment img {
+        aspect-ratio: 1;
+        width:10vw;
+    }
+    .commentInfo {
+        font-size: 80%;
+    }
+}
+   
+    @media only screen and (max-width:1919px) and (min-aspect-ratio:1) {
+
+
+        #banner h1 {
+            font-size:min(3.5vw,50px);
+        }
+    
+        #info h4 {
+            font-size:min(1vw,15px);
+        }
+
+        #infoImgTrack {
+            
+        }
+        #albumCover {
+            width:min(40vw,68vh);
+        }
+        #descAlbum {
+            font-size:min(2vw,3.5vh);
+            width:50%;
+            min-width:0px;
+            height:100%;
+        }
+
+        #commentsBody {
+            width:35vw;
+        }
+
+        #formID textArea {
+            font-size:min(1vw,1.8vh);
+        }
+
+        #formID #submitButton {
+            font-size:1vw;
+            width:40%;
+            aspect-ratio: 32 / 9;
+        }
+        #commentList {
+            width:50vw;
+        }
+        .comment {
+            font-size:min(1.5vw,2.5vh);
+        }
+        .comment img {
+            width:min(5vw, 9vh);
+        }
+        .commentInfo {
+            font-size:min(1vw,1.9vh);
+        }
+    }
+  

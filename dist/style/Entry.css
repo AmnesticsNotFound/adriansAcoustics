@@ -1,8 +1,4 @@
-#mainEntryH {
-  width:100vw;
-  
 
-}
 
 #bannerH {
   display:flex;
@@ -30,6 +26,10 @@
   margin:0px;
   padding:0px;
   padding-bottom:1vh;
+}
+
+#graphVid {
+  gap:3vh;
 }
 
 /*makes headphone name scale with less vw once the screen is 2000px wide*/
@@ -99,7 +99,7 @@
   max-height:1000px;
 }
 
-#graphDiv {
+#graphVid {
   
   display:flex;
   flex-direction: column;
@@ -110,7 +110,7 @@
  
 }
 
-#vidComments {
+/*#vidComments {
     
     margin-top:10%;
     margin-right:10%;
@@ -120,7 +120,7 @@
     flex-direction: row;
    
     width:100%;
-}
+}*/
 
 
 #commentsBody {
@@ -130,10 +130,7 @@
 #commentsBody h1 {
   padding: 0px;
 }
-#commentMaker hr {
-    width:95%;
-    
-}
+
 #commentMaker {
 display:flex;
 flex-direction: column;
@@ -175,14 +172,14 @@ align-items:center;
 
 .comment img {
   width:5vh;
-  height:5vh;
+  aspect-ratio: 1;
   border-radius:5px;
   
 }
 
 
 
-#formIDA {
+#formID {
     display:flex;
     flex-direction: column;
     
@@ -192,7 +189,7 @@ align-items:center;
     max-width:700px;
 }
 
-#formIDA #submitButton {
+#formID #submitButton {
     aspect-ratio:16/9;
     width:20%;
     border-style:none;
@@ -215,11 +212,7 @@ h5 {
     margin-top:5vw;
 }
 
-hr {
-  border-color:rgba(245, 245, 245, 0.816);
-  border-width:10px;
-  border-style:double;
-}
+
 
 #img-fader {
     width: fit-content;
@@ -271,29 +264,17 @@ hr {
   
 
 
-  @media only screen and (max-aspect-ratio:1) and (max-width:1440px){
+  @media only screen and (max-aspect-ratio:1){
 
     #page {
-      width:98vw;
+      width:97vw;
+      height:fit-content;
     }
-    #mainEntryH {
-      width:98vw;
-      display:flex;
-      flex-direction: column;
-      align-items: center;
-      overflow-x: hidden;
-      margin-left:4vw;
-    
-    }
+   
 
     #bannerH {
-      display:flex;
-      flex-direction:column;
-      margin-bottom:1vh;
-      padding:0px;
-      text-align: left;
-      width:97vw;
       
+      font-size: 100%;
     }
     
     #littleBanner {
@@ -309,13 +290,19 @@ hr {
     #littleBanner h3{
       font-size:130%;
     }
+
     #bannerH h1{
-      display: inline;
-      line-height: 0.8em;
-      font-size:13vw;
-      margin:0px;
-      padding:0px;
-      padding-bottom:1vh;
+      
+      font-size:min(7vw, 100px);
+    }
+      
+
+    #littleBanner {
+      width:100%;
+    }
+
+    #bannerH h3{
+      font-size:min(3vw, 200px);
     }
 
     #mainImg {
@@ -350,31 +337,34 @@ hr {
     height:50%;
     width:90%;
     max-width: 1226px;
-    font-size: 250%;
+    font-size: 3vw;
     border-color:black;
     margin-bottom: 3vh;
   
   }
   #graph {
     margin-top:5vh;
-    width:98%;
+    width:100%;
     height:100%;
-    
+    margin-bottom:2vh;
   }
   
-  #graphDiv {
+  #graphVid {
     
     display:flex;
     flex-direction: column;
-   
-    width:97%;
+    width:100%;
     margin-left:0px;
-    margin-right:0px
+    margin-right:0px;
     
    
   }
 
-  #vidComments {
+  #graphVid {
+    font-size:min(2vw,30px);
+  }
+
+  /*#vidComments {
     
     margin-top:10%;
     margin-right:0%;
@@ -384,55 +374,17 @@ hr {
     justify-self: center;
     gap:11%;
     width:95%;
+}*/
+
+
+
+
+hr {
+  width:40%;
 }
 
-#commentMaker {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:center;
-  width:100%;
-  }
 
-  #formIDA {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-   
-   
-    width:95vw;
-   
-}
-
-#formIDA #submitButton {
-    height:5vh;
-    width:20vw;
-    border-style:none;
-    border-radius: 5px;
-    margin:0px;
-    color:white;
-    background-color: rgb(98, 98, 98);
-    font-size:150%;
-  
-}
-  #commentMaker textArea {
-    width:90%;
-    aspect-ratio: 16/9;
-    border-radius: 10px;
-    font-size:200%;
-  }
   
   
   
-  .commentContainer {
-    border-bottom-style:double;
-    width:80vw;
-    display:flex;
-    flex-direction:column;
-    align-items:baseline;
-    margin-bottom:2vh;
-    
-    font-size: 140%;
-    
-  }
 }
